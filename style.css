@@ -4,6 +4,7 @@
     border: 1px solid red;
     transition: all 2s;
 }
+
 /* soluzione 1 */
 .ex-1-square:hover {
     background-color: red;
@@ -15,6 +16,7 @@
     background: red;
     transition: all 2s linear;
 }
+
 /* soluzione 2 */
 .ex-2-square:active {
     width: 100%;
@@ -26,6 +28,7 @@
     background: red;
     transition: all 1s ;
 }
+
 /* soluzione 3 */
 .ex-3-square:hover {
     border-radius: 50%;
@@ -37,6 +40,7 @@
     background: red;
     transition: all 1s ;
 }
+
 /* soluzione 4 */
 .ex-4-square:hover {
     opacity: 0;
@@ -49,6 +53,7 @@
     background: red;
     transition: all 1s;
 }
+
 /* soluzione 5 */
 .ex-5-square:hover {
     transform: scale(200%);
@@ -61,6 +66,7 @@
 .ex-6-img, .ex-7-img, .ex-8-img {
     width: 500px;
 }
+
 /* soluzione 6 */
 .ex-6-img:hover {
     filter: grayscale(100%);
@@ -69,6 +75,7 @@
 .ex-6-img {
     transition: all 0s;
 }
+
 /* soluzioni 7 */
 .ex-7-img {
     transition: all 1s;
@@ -77,6 +84,7 @@
 .ex-7-img:hover {
     filter: sepia(75%) grayscale(25%);
 }
+
 /* soluzioni 8 */
 .ex-8-img {
     transition: all 1s;
@@ -92,6 +100,7 @@
     width: 400px;
     transition: all 1s;
 }
+
 /* soluzioni 9 */
 .ex-9-img:hover {
     filter: saturate(50%) sepia(50%);
@@ -101,10 +110,31 @@
 
 .ex-10-icon {
     font-size: 60px;
+    animation: ex10 1s  linear infinite;
+
 }
+
+/* soluzioni 10 */
+@keyframes ex10 {
+    0% {transform: rotate(360deg);}
+    100% {transform: rotate(0deg);}
+}
+
 .ex-11-icon {
     font-size: 60px;
 }
+
+/* soluzioni 11 */
+.ex-11-icon:hover {
+    animation: ex11 2s ease-in;
+}
+
+@keyframes ex11 {
+    0% {transform: rotate(0deg);}
+    90% {transform: rotate(300deg);}
+    100% {transform: rotate(0deg);}
+}
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -125,7 +155,53 @@
     background: #f5f5f5;
     width: 60px;
     height: 20px;
+    /* test */
+    background-color: red;
 }
+
+/* soluzione 12 parte 1 */
+.ex-12-button:hover .ex-12-top-white {
+    animation: ex12-top 2s linear;
+}
+
+@keyframes ex12-top {
+    0% {
+        position: absolute;
+        top: -10px;
+        left: 10%;
+    }
+
+    50% {
+        position: absolute;
+        top: -10px;
+        left: calc(100% - 60px);
+    }
+    
+}
+
+/* soluzioni 13 parte 1 */
+.ex-13-button:hover .ex-13-top-white {
+    animation: ex13-top 2s linear;
+}
+
+@keyframes ex13-top {
+    0% {
+        position: absolute;
+        top: -10px;
+        left: 10%;
+    }
+
+    25% {
+        position: absolute;
+        top: -10px;
+        left: calc(100% - 60px);
+    }
+    
+    50% {
+        
+    }
+}
+
 .ex-12-bottom-white, .ex-13-bottom-white {
     position: absolute;
     bottom: -10px;
@@ -133,4 +209,27 @@
     background: #f5f5f5;
     width: 60px;
     height: 20px;
+    /* test */
+    background-color: red;
+}
+
+/* soluzioni 12 parte 2*/
+
+.ex-12-button:hover .ex-12-bottom-white {
+    animation: ex12-bottom 2s linear;
+}
+
+@keyframes ex12-bottom {
+    0% {
+        position: absolute;
+        bottom: -10px;
+        right: 20%;
+    }
+
+    50% {
+        position: absolute;
+        bottom: -10px;
+        right: calc(100% - 60px);
+    }
+    
 }
